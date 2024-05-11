@@ -188,7 +188,7 @@ std::string translate_instruction(Instruction instruction)
         break;
     case 0xE:
         // Ex9E and ExA1
-        switch (instruction.get_least_significant_byte())
+        switch (instruction.get_kk())
         {
         case 0x9E:
             // Ex9E - SKP Vx
@@ -202,7 +202,7 @@ std::string translate_instruction(Instruction instruction)
         break;
     case 0xF:
         // Fx07, Fx0A, Fx15, Fx18, Fx1E, Fx29, Fx33, Fx55, Fx65
-        switch (instruction.get_least_significant_byte())
+        switch (instruction.get_kk())
         {
         case 0x07:
             // Fx07 - LD Vx, DT
